@@ -1,6 +1,10 @@
-// Blocking, Synchronous way
+// Blocking, Synchronous way------
 
 const fs = require('fs');
+
+
+// FILE
+
 const textIn = fs.readFileSync('../starter/txt/input.txt','utf-8');
 console.log(textIn);
 
@@ -8,7 +12,7 @@ const textOut = `This is what we know about Avacado: ${textIn}.\nCreated on ${Da
 fs.writeFileSync('../starter/txt/output.txt', textOut);
 console.log('The file is written!');
 
-// Non-Blocking, Asynchronous way
+// Non-Blocking, Asynchronous way--------
 
 fs.readFile('../starter/txt/start.txt','utf-8',(err, data1) =>{
     if (err) return console.log("Error");
@@ -25,3 +29,7 @@ fs.readFile('../starter/txt/start.txt','utf-8',(err, data1) =>{
     
 })
 console.log("will print this");
+
+
+
+
